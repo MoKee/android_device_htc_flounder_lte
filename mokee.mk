@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-$(call inherit-product, vendor/cm/config/telephony.mk)
+# Inherit some common MK stuff.
+$(call inherit-product, vendor/mk/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/mk/config/telephony.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/mk/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder64.mk)
@@ -40,9 +40,9 @@ TARGET_OTA_ASSERT_DEVICE := flounder,flounder_lte
 PRODUCT_PACKAGES += \
 	com.android.nfc_extras
 
-# CM Overlays
+# MK Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-	device/htc/flounder/overlay-cm
+	device/htc/flounder/overlay-mk
 
 # Inherrit LTE config
 $(call inherit-product, device/htc/flounder/device-lte.mk)
@@ -59,7 +59,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_ID=MMB29K
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_flounder_lte
+PRODUCT_NAME := mk_flounder_lte
 PRODUCT_DEVICE := flounder_lte
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
