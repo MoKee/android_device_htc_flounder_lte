@@ -29,7 +29,7 @@ BOARD_NEEDS_VENDORIMAGE_SYMLINK := true
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/htc/flounder
-TARGET_KERNEL_CONFIG := cyanogenmod_flounder_defconfig
+TARGET_KERNEL_CONFIG := mokee_flounder_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_CMDLINE := androidboot.selinux=enforcing
 
@@ -48,15 +48,15 @@ DEVICE_PACKAGE_OVERLAYS += \
 $(call inherit-product, device/htc/flounder/device-lte.mk)
 $(call inherit-product-if-exists, vendor/htc/flounder_lte/device-vendor.mk)
 
-# LTE Overlays 
+# LTE Overlays
 DEVICE_PACKAGE_OVERLAYS += \
 	device/htc/flounder/lte_only_overlay
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=flounder_lte \
-    BUILD_FINGERPRINT=google/volantisg/flounder_lte:6.0.1/MOB30P/2960889:user/release-keys \
-    PRIVATE_BUILD_DESC="volantisg-user 6.0.1 MOB30P 2960889 release-keys" \
-    BUILD_ID=MOB30P
+    BUILD_FINGERPRINT=google/volantisg/flounder_lte:6.0.1/MOB30W/3031100:user/release-keys \
+    PRIVATE_BUILD_DESC="volantisg-user 6.0.1 MOB30W 3031100 release-keys" \
+    BUILD_ID=MOB30W
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := mk_flounder_lte
